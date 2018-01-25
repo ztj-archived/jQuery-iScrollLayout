@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>jQuery iScrollLayout Demos</title>
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/iScroll/5.2.0/iscroll.js"></script>
+    <script src="../src/jquery.iscrolllayout.js"></script>
+    <style>
+        .wrapper {
+            max-width: 640px;
+            margin: 20px auto;
+            padding: 0 15px;
+            overflow: hidden;
+        }
+
+        a {
+            margin: 5px 10px;
+            padding: 10px 30px;
+            display: inline-block;
+            background: rosybrown;
+            border: 1px solid seagreen;
+        }
+
+        .current {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h2>默认横向滚动示例</h2>
+    <div class="iScrollLayout">
+        <div class="items" style="white-space: nowrap;">
+            <a class="item" href="#">第1个</a>
+            <a class="item" href="#">第2个</a>
+            <a class="item" href="#">第3个</a>
+            <a class="item" href="#">第4个</a>
+            <a class="item" href="#">第5个</a>
+            <a class="item" href="#">第6个</a>
+            <a class="item" href="#">第7个</a>
+            <a class="item" href="#">第8个</a>
+            <a class="item" href="#">第9个</a>
+            <a class="item" href="#">第10个</a>
+            <a class="item" href="#">第11个</a>
+            <a class="item" href="#">第12个</a>
+        </div>
+    </div>
+    <h2>默认横向滚动激活示例</h2>
+    <div class="iScrollLayout">
+        <div class="items" style="white-space: nowrap;">
+            <a class="item" href="#">第1个</a>
+            <a class="item" href="#">第2个</a>
+            <a class="item" href="#">第3个</a>
+            <a class="item" href="#">第4个</a>
+            <a class="item" href="#">第5个</a>
+            <a class="item" href="#">第6个</a>
+            <a class="item" href="#">第7个</a>
+            <a class="item" href="#">第8个</a>
+            <a class="item current" href="#">第9个</a>
+            <a class="item" href="#">第10个</a>
+            <a class="item" href="#">第11个</a>
+            <a class="item" href="#">第12个</a>
+        </div>
+    </div>
+    <h2>自定义节点示例</h2>
+    <div class="iScrollLayout" data-items="#custom-items" data-item=".custom-item" data-current=".custom-current"
+         data-iscroll='{"scrollX": true, "scrollY": false, "click": true}'>
+        <div id="custom-items" style="white-space: nowrap;">
+            <a class="custom-item" href="#">第1个</a>
+            <a class="custom-item" href="#">第2个</a>
+            <a class="custom-item" href="#">第3个</a>
+            <a class="custom-item" href="#">第4个</a>
+            <a class="custom-item custom-current current" href="#">第5个</a>
+            <a class="custom-item" href="#">第6个</a>
+            <a class="custom-item" href="#">第7个</a>
+            <a class="custom-item" href="#">第8个</a>
+            <a class="custom-item" href="#">第9个</a>
+            <a class="custom-item" href="#">第10个</a>
+            <a class="custom-item" href="#">第11个</a>
+            <a class="custom-item" href="#">第12个</a>
+        </div>
+    </div>
+    <h2>JavaScript 示例</h2>
+    <div class="js-layout">
+        <div class="js-items" style="white-space: nowrap;">
+            <a class="js-item" href="#">第1个</a>
+            <a class="js-item" href="#">第2个</a>
+            <a class="js-item" href="#">第3个</a>
+            <a class="js-item" href="#">第4个</a>
+            <a class="js-item js-current current" href="#">第5个</a>
+            <a class="js-item" href="#">第6个</a>
+            <a class="js-item" href="#">第7个</a>
+            <a class="js-item" href="#">第8个</a>
+            <a class="js-item" href="#">第9个</a>
+            <a class="js-item" href="#">第10个</a>
+            <a class="js-item" href="#">第11个</a>
+            <a class="js-item" href="#">第12个</a>
+        </div>
+    </div>
+    <script>
+        $(".js-layout").iScrollLayout({
+            itemsEle: '.js-items',
+            itemEle: '.js-item',
+            currentEle: '.js-current',
+            iScrollOptions: {
+                "scrollX": true,
+                "scrollY": false,
+                "click": true
+            }
+        });
+    </script>
+</div>
+</body>
+</html>
