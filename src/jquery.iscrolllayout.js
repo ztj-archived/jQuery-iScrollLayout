@@ -37,8 +37,8 @@
             iScrollOptions || (iScrollOptions = _this.options.iScrollOptions);
             //横向滚动处理项
             if (iScrollOptions.scrollX) {
-                $rootEle.css("min-height", $itemsEle.height());
                 $itemsEle.css("white-space", "nowrap");
+                $rootEle.css("min-height", $itemsEle.height());
             }
             //IScroll 节点实例化
             $rootEle.data("iScroll", new IScroll($rootEle[0], iScrollOptions));
